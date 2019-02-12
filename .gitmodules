@@ -1,4 +1,4 @@
-[submodule "landing-cool"]
+[submodule "vibrant"]
 	path = landing-cool
 	url = https://github.com/indenizou/vibrant.git
 [submodule "api"]
