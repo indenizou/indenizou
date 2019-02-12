@@ -1,0 +1,9 @@
+[submodule "landing-cool"]
+	path = landing-cool
+	url = https://github.com/indenizou/vibrant.git
+[submodule "api"]
+	path = api
+	url = https://github.com/indenizou/api.git
+[submodule "dashboard"]
+	path = dashboard
+	url = https://github.com/indenizou/dashboard.git
