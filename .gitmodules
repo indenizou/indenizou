@@ -1,9 +1,12 @@
 [submodule "vibrant"]
-	path = landing-cool
-	url = https://github.com/indenizou/vibrant.git
+	path = vibrant
+	url = git@github.com:indenizou/vibrant.git
+	branch = master
 [submodule "api"]
 	path = api
-	url = https://github.com/indenizou/api.git
+	url = git@github.com:indenizou/api.git
+	branch = master
 [submodule "dashboard"]
 	path = dashboard
-	url = https://github.com/indenizou/dashboard.git
+	url = git@github.com:indenizou/dashboard.git
+	branch = master
