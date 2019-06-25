@@ -6,6 +6,13 @@ services:
     ports:
       - '27017:27017'
 
+  dbclient:
+    image: mongoclient/mongoclient
+    ports:
+      - '3000:27016'
+    depends_on:
+      - db
+
   api:
     build:
       context: ./api
@@ -14,7 +21,7 @@ services:
     env_file:
       - ./api/.env
     ports:
-      - 1800:1800
+      - 1810:1810
     volumes:
       - ./api:/usr/src/app
       - /usr/src/app/node_modules
