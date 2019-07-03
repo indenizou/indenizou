@@ -2,11 +2,13 @@ version: '3'
 
 services:
   db:
+    container_name: mongo
     image: mongo
     ports:
       - '27017:27017'
 
   dbclient:
+    container_name: mongo-client
     image: mongoclient/mongoclient
     ports:
       - '3000:27016'
@@ -14,16 +16,17 @@ services:
       - db
 
   api:
+    container_name: api-indenizou
     build:
       context: ./api
-      args:
-        - NODE_ENV=development
+      # args:
+      #   - NODE_ENV=development
     env_file:
       - ./api/.env
     ports:
       - 1810:1810
     volumes:
-      - ./api:/usr/src/app
       - /usr/src/app/node_modules
+      - ./uploads:/usr/src/app/uploads
     depends_on:
       - db
